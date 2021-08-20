@@ -95,7 +95,7 @@ if(stled==0) mute=0;
 if(String(pub.topic()) == "password") // проверяем из нужного ли нам топика пришли данные 
   {
 int stled = payload.toInt();
-if((stled==admin ||stled==test_manya) && login==0){ login=1; client.publish("Log in", "Hello!"); if(mute==0){Piezo_play();}  if(stled==test_manya){ client.publish("to_admin", "Пользователь:Маня"); client.publish("user","Привет, Манечкааааааааа, лублу тебя, сябки");}}
+if((stled==admin ||stled==test_manya) && login==0){ login=1; client.publish("Log in", "Hello!"); if(mute==0){Piezo_play();}  if(stled==test_manya){ client.publish("to_admin", "Пользователь: ок"); }}
 if((stled==admin_e ||stled==test_manya_e) && login==1){ login=0; client.publish("Log in", "Goodbye"); if(mute==0)Piezo_OK();}
 }
 if(String(pub.topic()) == "svet"  && login==1) // проверяем из нужного ли нам топика пришли данные 
